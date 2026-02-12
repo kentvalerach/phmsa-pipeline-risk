@@ -1,0 +1,21 @@
+operator_id,operator_name,state,year,miles,age,risk_score,event,predicted_prob
+30001,Kinder Morgan Texas,TX,2024,4521.3,45.2,0.342,0,0.051
+30002,Enterprise Products,TX,2024,3892.1,38.7,0.298,1,0.045
+30003,Williams Companies,OK,2024,2876.5,42.1,0.276,0,0.041
+30004,Energy Transfer,LA,2024,3654.2,35.4,0.312,0,0.047
+30005,TC Energy,MT,2024,1923.7,52.3,0.234,0,0.035
+30006,Boardwalk Pipeline,TX,2024,2145.8,41.6,0.256,0,0.038
+30007,Southern Natural Gas,GA,2024,1876.3,48.9,0.223,0,0.033
+30008,Transcontinental Gas,PA,2024,2987.4,55.2,0.287,1,0.043
+30009,Northern Natural Gas,NE,2024,3123.6,62.1,0.298,0,0.045
+30010,Panhandle Eastern,KS,2024,2456.7,58.4,0.267,0,0.040
+30011,ANR Pipeline,MI,2024,1987.2,51.3,0.245,0,0.037
+30012,Texas Eastern,OH,2024,2654.3,49.8,0.276,0,0.041
+30013,Midcontinent Express,OK,2024,1543.2,28.4,0.198,0,0.030
+30014,Gulf South Pipeline,LA,2024,1876.5,44.2,0.234,0,0.035
+30015,Florida Gas Transmission,FL,2024,2123.4,47.6,0.256,0,0.038
+30016,Rockies Express,CO,2024,1765.8,18.2,0.187,0,0.028
+30017,Ruby Pipeline,NV,2024,1432.1,15.4,0.165,0,0.025
+30018,Kern River Gas,UT,2024,1654.3,32.7,0.212,0,0.032
+30019,Questar Pipeline,UT,2024,1234.5,45.8,0.198,0,0.030
+30020,Northwest Pipeline,WA,2024,1876.2,54.3,0.234,0,0.035

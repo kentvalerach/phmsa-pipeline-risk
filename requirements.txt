@@ -1,0 +1,43 @@
+# PHMSA Pipeline Risk Model
+# Requirements for running the full project
+
+# Core Data Science
+numpy>=1.21.0
+pandas>=1.4.0
+scipy>=1.8.0
+
+# Machine Learning
+scikit-learn>=1.0.0
+lightgbm>=3.3.0
+shap>=0.41.0
+
+# Visualization
+matplotlib>=3.5.0
+seaborn>=0.11.0
+plotly>=5.5.0
+
+# Dashboard
+streamlit>=1.20.0
+streamlit-folium>=0.11.0
+
+# Data Access
+requests>=2.27.0
+openpyxl>=3.0.9
+
+# Statistics
+statsmodels>=0.13.0
+
+# Utilities
+tqdm>=4.62.0
+joblib>=1.1.0
+pyyaml>=6.0
+
+# Development (optional)
+pytest>=7.0.0
+black>=22.0.0
+flake8>=4.0.0
+jupyter>=1.0.0
+
+# Geographic (optional, for advanced features)
+folium>=0.12.0
+geopandas>=0.10.0
