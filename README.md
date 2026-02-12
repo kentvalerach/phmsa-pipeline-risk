@@ -190,12 +190,6 @@ Breaking the signal ceiling requires:
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! Please read [CONTRIBUTING.md](docs/CONTRIBUTING.md) for guidelines.
-
----
-
 ## 📄 License
 
 This project is licensed under the MIT License - see [LICENSE](LICENSE) for details.
@@ -206,7 +200,7 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) for deta
 
 **Kent**  
 Telecommunications Engineer | Data Scientist  
-[LinkedIn](https://linkedin.com/in/yourprofile) | [Portfolio](https://yourportfolio.com)
+[LinkedIn](https://www.linkedin.com/in/kent-valera-chirinos-44ba721b/) 
 
 *Currently seeking opportunities in pipeline integrity analytics and risk modeling.*
 
