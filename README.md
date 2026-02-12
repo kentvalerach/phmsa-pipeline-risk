@@ -91,53 +91,39 @@ LightGBM Classifier
 
 ```
 phmsa-pipeline-risk/
-├── README.md
-├── requirements.txt
-├── setup.py
+├── README.md                 # Project documentation
+├── requirements.txt          # Python dependencies
+├── LICENSE                   # MIT License
 │
-├── app/                      # Streamlit dashboard
-│   ├── streamlit_app.py
-│   ├── pages/
-│   └── components/
+├── app/
+│   └── streamlit_app.py      # Interactive dashboard
 │
-├── src/                      # Core modules
-│   ├── data/
-│   │   ├── extract_phmsa.py      # PHMSA data extraction
-│   │   ├── build_panel.py        # Survival panel construction
-│   │   └── enrich_features.py    # Feature engineering
-│   │
+├── src/
 │   ├── models/
-│   │   ├── train.py              # Model training pipeline
-│   │   ├── evaluate.py           # Walk-forward evaluation
-│   │   └── predict.py            # Inference utilities
-│   │
-│   └── utils/
-│       ├── temporal_cv.py        # AFML cross-validation
-│       └── calibration.py        # Probability calibration
+│   │   └── train.py          # LightGBM training pipeline
+│   └── data/
+│       └── build_panel.py    # Panel construction
+│
+├── scripts/                  # Analysis scripts
+│   ├── rosen_p4_15yr_panel.py
+│   ├── lgbm_full_pipeline_afml.py
+│   ├── enrich_panel_km.py
+│   ├── external_enrichment_api.py
+│   └── extract_cp_and_test.py
 │
 ├── data/
-│   ├── raw/                  # Original PHMSA files (not tracked)
-│   ├── processed/            # Cleaned panels
-│   └── external/             # SSURGO, USGS data
+│   ├── processed/
+│   │   ├── survival_panel_15yr_final.csv
+│   │   └── operator_risk_ranking_final.csv
+│   └── external/
+│       ├── ssurgo_soil_corrosivity.csv
+│       └── usgs_earthquakes.csv
 │
-├── models/                   # Trained model artifacts
-│   ├── lgbm_final.pkl
-│   └── calibrator.pkl
-│
-├── notebooks/                # Analysis notebooks
-│   ├── 01_eda.ipynb
-│   ├── 02_feature_engineering.ipynb
-│   ├── 03_model_development.ipynb
-│   └── 04_signal_ceiling_analysis.ipynb
-│
-├── docs/                     # Documentation
-│   ├── methodology.md
-│   ├── data_dictionary.md
-│   └── images/
-│
-└── tests/                    # Unit tests
-    ├── test_data.py
-    └── test_models.py
+└── docs/
+    ├── ROSEN_P4_Project_Plan.pdf
+    ├── rosen_p4_eda_complete_report.md
+    ├── data_dictionary.md
+    └── final_report.md       
 ```
 
 ---
