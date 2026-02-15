@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 =============================================================================
 LightGBM Pipeline — AFML-Compliant Gas Transmission Incident Prediction
@@ -1062,4 +1061,5 @@ def main():
 
 
 if __name__ == '__main__':
+
     main()
