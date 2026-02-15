@@ -1,4 +1,4 @@
-r"""
+"""
 ROSEN P4 — CP COVERAGE EXTRACTION FIX
 ======================================
 Extracts cathodic protection coverage from Part D using correct column names.
@@ -350,4 +350,5 @@ def main():
 
 
 if __name__ == '__main__':
+
     main()
