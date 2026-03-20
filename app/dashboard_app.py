@@ -862,7 +862,7 @@ def main():
         **Author:** Kent Valera Chirinos  
         Telecommunications Engineer  
         
-        [GitHub](https://github.com) | [LinkedIn](https://linkedin.com)
+        [GitHub](https://github.com/kentvalerach/) | [LinkedIn](https://www.linkedin.com/in/kent-valera-chirinos-44ba721b/)
         """)
     
     # Route to page
