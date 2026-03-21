@@ -828,108 +828,118 @@ def render_methodology():
 def main():
     """Main application entry point."""
     
-    # Load data
     with st.spinner("Loading data..."):
         df = load_data()
         operator_agg, state_agg, year_agg, decade_agg = compute_aggregations(df)
     
-    # Sidebar
-    with st.sidebar:
-    st.markdown("""
-    <div style="text-align: center; padding: 0.5rem 0 1rem 0;">
-        <div style="
-            width: 70px; height: 70px;
-            background: linear-gradient(135deg, #1E3A5F, #1E88E5);
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            margin: 0 auto 0.8rem auto;
-            font-size: 2rem;
-        ">👤</div>
-        <p style="font-size: 1.1rem; font-weight: 700; margin: 0; color: #1E3A5F;">
-            Kent Valera Chirinos
-        </p>
-        <p style="font-size: 0.8rem; color: #555; margin: 0.2rem 0 0 0;">
-            Telecommunications Engineer
-        </p>
-        <p style="font-size: 0.75rem; color: #888; margin: 0.1rem 0 0 0;">
-            📍 Dresden, Germany
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
-
-    st.markdown("---")
-
-    st.markdown("""
-    <p style="font-size: 0.82rem; color: #444; line-height: 1.6;">
-        Engineer with expertise in <strong>data science</strong>, 
-        <strong>machine learning</strong>, and <strong>quantitative analysis</strong>. 
-        This project applies AFML methodology and 15 years of PHMSA data 
-        to model pipeline incident risk at operator level.
-    </p>
-    """, unsafe_allow_html=True)
-
-    st.markdown("---")
-
-    st.markdown("""
-    <p style="font-size: 0.78rem; font-weight: 700; color: #1E3A5F; 
-               margin-bottom: 0.5rem; letter-spacing: 0.05em;">
-        🛠 TECHNICAL SKILLS
-    </p>
-    """, unsafe_allow_html=True)
-
-    skills = [
-        ("🐍", "Python", "Pandas · Scikit-learn · LightGBM"),
-        ("📊", "ML/Stats", "AFML · Survival Analysis · SHAP"),
-        ("🗄️", "Data", "PostgreSQL · Streamlit · Plotly"),
-        ("📡", "Domain", "Telecom · Pipeline Risk · Quant Finance"),
-    ]
-    for icon, label, detail in skills:
-        st.markdown(f"""
-        <div style="margin-bottom: 0.5rem;">
-            <span style="font-size: 0.8rem; font-weight: 600; color: #333;">
-                {icon} {label}
-            </span><br>
-            <span style="font-size: 0.72rem; color: #777; margin-left: 1.4rem;">
-                {detail}
-            </span>
+    with st.sidebar:                          # ← todo lo de abajo va INDENTADO aquí dentro
+        st.markdown("""
+        <div style="text-align: center; padding: 0.5rem 0 1rem 0;">
+            <div style="
+                width: 70px; height: 70px;
+                background: linear-gradient(135deg, #1E3A5F, #1E88E5);
+                border-radius: 50%;
+                display: flex; align-items: center; justify-content: center;
+                margin: 0 auto 0.8rem auto;
+                font-size: 2rem;
+            ">👤</div>
+            <p style="font-size: 1.1rem; font-weight: 700; margin: 0; color: #1E3A5F;">
+                Kent Valera Chirinos
+            </p>
+            <p style="font-size: 0.8rem; color: #555; margin: 0.2rem 0 0 0;">
+                Telecommunications Engineer
+            </p>
+            <p style="font-size: 0.75rem; color: #888; margin: 0.1rem 0 0 0;">
+                📍 Dresden, Germany
+            </p>
         </div>
         """, unsafe_allow_html=True)
 
-    st.markdown("---")
+        st.markdown("---")
 
-    st.markdown("""
-    <p style="font-size: 0.78rem; font-weight: 700; color: #1E3A5F; 
-               margin-bottom: 0.6rem; letter-spacing: 0.05em;">
-        📬 CONTACT
-    </p>
-    <p style="font-size: 0.8rem; margin: 0.2rem 0;">
-        ✉️ <a href="mailto:valerakent@yahoo.com" 
-               style="color: #1E88E5; text-decoration: none;">
-            valerakent@yahoo.com
-        </a>
-    </p>
-    <p style="font-size: 0.8rem; margin: 0.2rem 0;">
-        🐙 <a href="https://github.com/kentvalerach/" 
-               target="_blank" style="color: #1E88E5; text-decoration: none;">
-            github.com/kentvalerach
-        </a>
-    </p>
-    <p style="font-size: 0.8rem; margin: 0.2rem 0;">
-        💼 <a href="https://www.linkedin.com/in/kent-valera-chirinos-44ba721b/" 
-               target="_blank" style="color: #1E88E5; text-decoration: none;">
-            LinkedIn Profile
-        </a>
-    </p>
-    """, unsafe_allow_html=True)
+        st.markdown("""
+        <p style="font-size: 0.82rem; color: #444; line-height: 1.6;">
+            Engineer with expertise in <strong>data science</strong>, 
+            <strong>machine learning</strong>, and <strong>quantitative analysis</strong>. 
+            This project applies AFML methodology and 15 years of PHMSA data 
+            to model pipeline incident risk at operator level.
+        </p>
+        """, unsafe_allow_html=True)
 
-    st.markdown("---")
+        st.markdown("---")
 
-    page = st.radio(
-        "Navigation",
-        ["📊 Overview", "📈 Signal Ceiling", "🎯 Risk Rankings",
-         "📅 Vintage Analysis", "📚 Methodology"],
-        label_visibility="collapsed"
-    )
+        st.markdown("""
+        <p style="font-size: 0.78rem; font-weight: 700; color: #1E3A5F; 
+                   margin-bottom: 0.5rem; letter-spacing: 0.05em;">
+            🛠 TECHNICAL SKILLS
+        </p>
+        """, unsafe_allow_html=True)
+
+        skills = [
+            ("🐍", "Python", "Pandas · Scikit-learn · LightGBM"),
+            ("📊", "ML/Stats", "AFML · Survival Analysis · SHAP"),
+            ("🗄️", "Data", "PostgreSQL · Streamlit · Plotly"),
+            ("📡", "Domain", "Telecom · Pipeline Risk · Quant Finance"),
+        ]
+        for icon, label, detail in skills:
+            st.markdown(f"""
+            <div style="margin-bottom: 0.5rem;">
+                <span style="font-size: 0.8rem; font-weight: 600; color: #333;">
+                    {icon} {label}
+                </span><br>
+                <span style="font-size: 0.72rem; color: #777; margin-left: 1.4rem;">
+                    {detail}
+                </span>
+            </div>
+            """, unsafe_allow_html=True)
+
+        st.markdown("---")
+
+        st.markdown("""
+        <p style="font-size: 0.78rem; font-weight: 700; color: #1E3A5F; 
+                   margin-bottom: 0.6rem; letter-spacing: 0.05em;">
+            📬 CONTACT
+        </p>
+        <p style="font-size: 0.8rem; margin: 0.2rem 0;">
+            ✉️ <a href="mailto:valerakent@yahoo.com" 
+                   style="color: #1E88E5; text-decoration: none;">
+                valerakent@yahoo.com
+            </a>
+        </p>
+        <p style="font-size: 0.8rem; margin: 0.2rem 0;">
+            🐙 <a href="https://github.com/kentvalerach/" 
+                   target="_blank" style="color: #1E88E5; text-decoration: none;">
+                github.com/kentvalerach
+            </a>
+        </p>
+        <p style="font-size: 0.8rem; margin: 0.2rem 0;">
+            💼 <a href="https://www.linkedin.com/in/kent-valera-chirinos-44ba721b/" 
+                   target="_blank" style="color: #1E88E5; text-decoration: none;">
+                LinkedIn Profile
+            </a>
+        </p>
+        """, unsafe_allow_html=True)
+
+        st.markdown("---")
+
+        page = st.radio(
+            "Navigation",
+            ["📊 Overview", "📈 Signal Ceiling", "🎯 Risk Rankings",
+             "📅 Vintage Analysis", "📚 Methodology"],
+            label_visibility="collapsed"
+        )
+
+    # Route to page
+    if page == "📊 Overview":
+        render_overview(df, operator_agg, state_agg, year_agg)
+    elif page == "📈 Signal Ceiling":
+        render_signal_ceiling()
+    elif page == "🎯 Risk Rankings":
+        render_risk_rankings(df, operator_agg)
+    elif page == "📅 Vintage Analysis":
+        render_vintage_analysis(df, decade_agg)
+    elif page == "📚 Methodology":
+        render_methodology()
 
 
 if __name__ == "__main__":
